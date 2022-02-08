@@ -18,4 +18,3 @@ system os_command
 print "Введите команду Ruby: "
 ruby_command = STDIN.gets.chomp
 system "ruby -e \"#{ruby_command}\""
-# ruby -e "puts (5 + 5).to_i.even?" 
