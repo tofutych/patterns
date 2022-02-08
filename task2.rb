@@ -1,4 +1,3 @@
-# puts "Сумма цифр числа = #{ARGV[0].to_i.digits.sum}"
 def sum_of_digits(num)
     num.digits.sum
 end
@@ -14,3 +13,14 @@ end
 def product(num)
     num.digits.reduce(:*)
 end
+
+def get_number_divisors(num)
+    (1..num).map {|i| i if num % i == 0}.compact
+end
+
+def is_prime?(num)
+    get_number_divisors(num).sum == 1 + num
+end
+
+
+puts is_prime?(163)
