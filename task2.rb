@@ -38,7 +38,6 @@ end
 # Метод 3 Найти произведение таких делителей числа, сумма цифр
 # которых меньше, чем сумма цифр исходного числа.
 def method_3(num)
-    print get_number_divisors(num)
     get_number_divisors(num).select { |divisor| sum_of_digits(divisor) < sum_of_digits(num) }.reduce(:*)
 end
 
