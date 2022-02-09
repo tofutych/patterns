@@ -28,3 +28,7 @@ def method_1(num)
     get_number_divisors(num).select {|elem| is_prime?(elem)}.sum
 end
 
+# Метод 2 Найти количество нечетных цифр числа, больших 3
+def method_2(num)
+    num.digits.select { |digit| digit > 3 && (not digit.even?) }.size
+end
