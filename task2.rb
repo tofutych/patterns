@@ -10,7 +10,7 @@ def min_digit(num)
     num.digits.min
 end
 
-def product(num)
+def multiplication(num)
     num.digits.reduce(:*)
 end
 
@@ -31,4 +31,10 @@ end
 # Метод 2 Найти количество нечетных цифр числа, больших 3
 def method_2(num)
     num.digits.select { |digit| digit > 3 && (not digit.even?) }.size
+end
+
+# Метод 3 Найти произведение таких делителей числа, сумма цифр
+# которых меньше, чем сумма цифр исходного числа.
+def method_3(num)
+    get_number_divisors(num).select { |divisor| sum_of_digits(divisor) < sum_of_digits(num) }.reduce(:*)
 end
