@@ -23,4 +23,8 @@ def is_prime?(num)
 end
 
 
-puts is_prime?(163)
+# Метод 1 Найти сумму простых делителей числа.
+def method_1(num)
+    get_number_divisors(num).select {|elem| is_prime?(elem)}.sum
+end
+
