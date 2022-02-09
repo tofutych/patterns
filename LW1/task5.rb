@@ -8,7 +8,3 @@ def task9(str)
     latin_lower = str.split("").select {|char| char.ord > 96 && char.ord < 123 }.join
     latin_lower == latin_lower.reverse
 end
-
-
-# a = "21-12-2019"
-# print a.scan(/(?:[0-1][1-2]|[1-9])\-(?:3[0-1]|[0-2][1-9]|[1-9])\-[0-9]{2}(?:[0-9]{2})?\z/)
