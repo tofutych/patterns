@@ -31,7 +31,7 @@ def write_to_yaml(arr)
 end
 
 def read_from_yaml(path)
-    return Psych.safe_load_file("data.yaml", permitted_classes: [Department])
+    Psych.safe_load_file("data.yaml", permitted_classes: [Department])
 end
 
 
