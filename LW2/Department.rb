@@ -9,7 +9,7 @@ class Department
     end
 
     def to_s
-        "#{self.name}\t#{self.phone_number}"
+        "#{self.name}|#{self.phone_number}"
     end
 
     def add_duty(duty, description)
@@ -29,6 +29,7 @@ class Department
     end
 
     def delete_duty()
+        puts "\"#{@selected_duty}\" удалено."
         @duties.delete(@selected_duty)
     end
 
@@ -49,12 +50,3 @@ class Department
     end
 end
 
-# murderers = Department.new("Murderers", "89186824834")
-# p murderers.phone_number
-# murderers.add_duty("Убить влада новикова", "Быстро и незаметно")
-# murderers.add_duty("Убить влада ручкина", "Как можно мучительнее")
-# murderers.select_duty("Убить влада новикова")
-# p murderers.get_description
-# puts
-# murderers.delete_duty
-# p murderers.get_description
