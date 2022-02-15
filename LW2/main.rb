@@ -30,8 +30,13 @@ def write_to_yaml(arr)
     end
 end
 
+def read_from_yaml(path)
+    return Psych.safe_load_file("data.yaml", permitted_classes: [Department])
+end
 
-arr = read_from_txt("/home/tofut/Desktop/University/Ruby/LW2/dep_objects.txt")
-arr.append(Department.new("Robbers", "89181234567"))
-write_to_txt("/home/tofut/Desktop/University/Ruby/LW2/dep_objects copy.txt", arr)
-write_to_yaml(arr)
+
+# arr = read_from_txt("/home/tofut/Desktop/University/Ruby/LW2/dep_objects.txt")
+# arr.append(Department.new("Robbers", "89181234567"))
+# write_to_txt("/home/tofut/Desktop/University/Ruby/LW2/dep_objects copy.txt", arr)
+# write_to_yaml(arr)
+# arr = read_from_yaml("/home/tofut/Desktop/University/Ruby/LW2/data.yaml") 
